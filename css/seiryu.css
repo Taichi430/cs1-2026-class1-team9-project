@@ -1,0 +1,167 @@
+/* ===== 全体 ===== */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: "Noto Sans JP", sans-serif;
+    background: linear-gradient(135deg, #fff7f2, #ffe6d5);
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ===== メインタイトル ===== */
+h1 {
+    text-align: center;
+    color: white;
+    background: linear-gradient(90deg, #ff7a00, #ff5400);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* ===== 作品タイトル ===== */
+h2 {
+    background: white;
+    border-left: 8px solid #ff6b00;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    color: #222;
+}
+
+/* ===== 見出し ===== */
+h3 {
+    margin-top: 40px;
+    text-align: center;
+    color: #ff6b00;
+    font-size: 2rem;
+    position: relative;
+}
+
+h3::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #ff6b00;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* ===== 紹介文 ===== */
+p {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.08);
+}
+
+/* ===== おすすめポイント ===== */
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+ol li {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 8px solid #ff6b00;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0,0,0,.12);
+    transition: 0.3s;
+}
+
+ol li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+/* 番号を丸で表示 */
+ol {
+    counter-reset: item;
+}
+
+ol li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 80px;
+}
+
+ol li::before {
+    content: counter(item);
+    position: absolute;
+    left: 20px;
+    top: 22px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #ff6b00;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2rem;
+}
+
+strong {
+    color: #ff5500;
+    font-size: 1.2rem;
+}
+
+/* ===== リンク ===== */
+a {
+    color: white;
+    background: #ff6b00;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+a:hover {
+    background: #222;
+}
+
+/* ===== 最後の案内 ===== */
+body > p:last-child {
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    margin-top: 40px;
+}
+
+/* ===== スマホ対応 ===== */
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+}
+.container{
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,.5);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
