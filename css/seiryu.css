@@ -225,3 +225,52 @@ strong{
         font-size:24px;
     }
 }
+/* =========================== プロモーションビデオ =========================== */ 
+.movie-section{ 
+    margin:50px 0; 
+    background:white; 
+    padding:30px; 
+    border-radius:15px; 
+    box-shadow:0 5px 12px rgba(0,0,0,.1); 
+} 
+.movie-section h2{ 
+    text-align:center; 
+    margin-bottom:25px; 
+    background:none; 
+    border:none; 
+    box-shadow:none; 
+    color:#ff7300; 
+    font-size:30px; 
+} 
+.movie-section h2::after{ 
+    content:""; 
+    display:block; 
+    width:120px; 
+    height:4px; 
+    background:#ff7300; 
+    margin:10px auto 0; 
+    border-radius:20px; 
+} .video-container{ 
+    position:relative; 
+    width:100%; 
+    max-width:900px; 
+    margin:0 auto; 
+    aspect-ratio:16 / 9; 
+    border-radius:15px; 
+    overflow:hidden; 
+    box-shadow:0 8px 18px rgba(0,0,0,.15); 
+} 
+.video-container iframe{ 
+    width:100%; 
+    height:100%; 
+    border:none; 
+} 
+/* スマホ対応 */ 
+@media(max-width:768px){ 
+    .movie-section{
+         padding:20px; 
+        } 
+        .movie-section h2{ 
+            font-size:24px; 
+        } 
+    }
